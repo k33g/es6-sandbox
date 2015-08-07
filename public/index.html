@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+
+  <script src="js/vendors/traceur.js"></script>
+  <script src="js/vendors/es6-module-loader-dev.js"></script>
+
+</head>
+<body>
+
+  <script>
+    //System.transpiler = 'babel';
+    System.traceurOptions = {};
+    System.import('js/index.js').then(function(module) {
+      console.log("loaded.")
+    }).catch(function (e) {
+      console.error(e);
+    });
+  </script>
+
+</body>
+</html>
